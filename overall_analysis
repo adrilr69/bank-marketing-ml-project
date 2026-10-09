@@ -40,7 +40,6 @@ y = (y.astype(str) == "2").astype(int)
 y.name = "target"
 
 # Overall Checks
-print("\n--- BASIC DATASET INTEGRITY ---")
 print(f"Number of rows: {X.shape[0]}")
 print(f"Number of columns (predictors): {X.shape[1]}")
 print(f"Missing values (NaN): {X.isna().sum().sum()}")
