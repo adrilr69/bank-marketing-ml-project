@@ -1,8 +1,4 @@
 # =============================================================================
-# 02_preprocessing_pipeline.py
-#
-# Step 2: Feature Engineering & Missing Values
-# Step 5: Wrap preprocessing in a Pipeline
 #
 # This script loads the development data and builds a scikit-learn Pipeline.
 # It includes a custom transformer to engineer 3 new features, followed by a 
