@@ -1,0 +1,4 @@
+model,n_trials,best_cv_pr_auc
+logistic_regression,20,0.40350044852242134
+random_forest,25,0.4478641299146619
+lightgbm,30,0.45595445606319257

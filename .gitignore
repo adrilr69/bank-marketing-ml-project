@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MLflow local tracking store (runs are exported in results/mlflow_runs.csv)
+mlflow.db
+mlruns/
+mlartifacts/
+
+# random forest model is too big for git (it can be regenerated with tuning_with_mlflow.py)
+models/best_random_forest.pkl
