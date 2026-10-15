@@ -1,0 +1,5 @@
+{
+    "model": "lightgbm",
+    "calibration": "sigmoid (Platt)",
+    "threshold": 0.2698034149939699
+}
