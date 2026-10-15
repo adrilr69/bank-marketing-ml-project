@@ -1,5 +1,5 @@
 # Shared code used by all the scripts from step 3 to step 10
-# (same feature engineering + preprocessing as preprocessing_pipeline.py)
+# (same feature engineering + preprocessing as 02_preprocessing_pipeline.py)
 # We put it in one file so that every script builds the exact same pipeline
 # and so the saved .pkl models can be loaded again from another script.
 

@@ -1,13 +1,13 @@
 # Step 6 & 7 - Optuna tuning of the 3 models + experiment tracking with MLflow
 #
-# In hyperparameter_tuning.py only LightGBM was tuned. Here we tune the 3 models
+# In 04_hyperparameter_tuning.py only LightGBM was tuned. Here we tune the 3 models
 # (Logistic Regression, Random Forest, LightGBM) with Optuna and we log EVERY trial in MLflow
 # (parameters + cross-validation metrics). For the best model of each family we also log
 # artifacts (fitted pipeline, optimization plot, table of all trials).
 #
 # Score optimized = mean PR-AUC with 5-fold stratified CV on the dev set.
 # The test set is NOT used here, so the CV score is only used to choose, and the test set
-# stays untouched for the final evaluation (final_comparison.py).
+# stays untouched for the final evaluation (07_final_comparison.py).
 #
 # MLflow is not in the course slides, we use it because it is the standard tool for experiment tracking.
 # To look at the runs:  mlflow ui --backend-store-uri sqlite:///mlflow.db   then open http://127.0.0.1:5000
@@ -83,7 +83,7 @@ def make_model(model_name, params):
     elif model_name == "random_forest":
         model = RandomForestClassifier(**params, random_state=42, n_jobs=-1)
     else:
-        # subsample only works in LightGBM if subsample_freq > 0 (it was missing in hyperparameter_tuning.py)
+        # subsample only works in LightGBM if subsample_freq > 0 (it was missing in 04_hyperparameter_tuning.py)
         model = LGBMClassifier(**params, subsample_freq=1, random_state=42, n_jobs=-1, verbose=-1)
     return model
 
